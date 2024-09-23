@@ -1,0 +1,28 @@
+{
+  "name": "processo_trabalhista_harmonizacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome"
+  },
+  "keywords": [],
+  "author": "Gustavo Duran",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "@cucumber/cucumber": "^11.0.0",
+    "cypress": "^13.14.2"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.7",
+    "cypress-config-cucumber": "^1.1.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/**"
+  }
+}
