@@ -4,7 +4,7 @@ const loginElements = new LoginElements()
 
 class LoginPage {
     acessarHomePage() {
-        cy.visit('/totvs-menu/#/')
+        cy.visit('/totvs-login/loginForm')
     }
 
     preencherLogin(login, senha) {
@@ -33,9 +33,9 @@ class LoginPage {
     }
 
     programaOK() {
-        cy.getIframeBody('#extView2').find(loginElements.processoTrabalhistaOk()) 
+        cy.getIframeBody('#extView2').find(loginElements.loginOk()) 
             .should('be.visible')
-            .should('contain.text', 'Adicionar Processo')
+            .and('have.attr', 'src', 'assets/img/logo_totvs.png')
     }
 }
 

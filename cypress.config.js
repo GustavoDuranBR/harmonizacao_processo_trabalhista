@@ -1,9 +1,3 @@
-/**
- * Configurações do Cypress
- * Autor: Gustavo Duran
- * Data: 14 de julho de 2024
- */
-
 const { defineConfig } = require("cypress");
 const cucumber = require("cypress-cucumber-preprocessor").default;
 const path = require("path");
@@ -28,5 +22,11 @@ module.exports = defineConfig({
     browser: 'chrome',
     tags: '@login or @api and not @ignore',
     baseUrl: 'http://joisrvapldev027:8080',
+    
+    // Definição das variáveis de ambiente
+    env: {
+      username: 'super',
+      password: 'super'
+    }
   }
 });

@@ -38,8 +38,8 @@ class LoginElements {
         return '.btn.btn-primary.ng-binding'
     }
 
-    processoTrabalhistaOk = () => {
-        return '.po-md-2.po-mt-4.po-sm-12 > .po-button'
+    loginOk = () => {
+        return 'div#menu-logo > img'
     }
 } export default LoginElements;
 
