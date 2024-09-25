@@ -19,7 +19,7 @@ class LoginElements {
     }
 
     usuarioLogado = () => {
-        return '[ng-if="userName\.length \<\= 30"]'
+        return "[ng-if='userName\.length \<\= 30']"
     }
 
     inputPesquisar = () => {

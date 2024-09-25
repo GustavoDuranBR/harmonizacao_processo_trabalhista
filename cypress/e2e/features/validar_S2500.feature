@@ -1,4 +1,4 @@
-Feature: Realizar validações nos campos do evento S-2500
+Feature: Realizar o Login e validar campos do evento S-2500
 
   Scenario: Validar campo Número do processo com Processo Judicial
     Given que o usuário já tenha realizado o login

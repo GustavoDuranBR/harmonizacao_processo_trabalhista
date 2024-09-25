@@ -3,10 +3,10 @@ import LoginPage from "../pages/login_page";
 const loginPage = new LoginPage();
 
 
-When("o usuário seleciona o programa {string}", (programa) => {
-  loginPage.laborProcess(programa);
+When("o usuário esteja na página dos programas", () => {
+  loginPage.loginOK();
 });
 
-Then("o programa deve ser selecionado com sucesso", () => {
+Then("o programa está pronto para ser executado", () => {
   loginPage.programaOK();
 });

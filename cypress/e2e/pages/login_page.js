@@ -18,22 +18,22 @@ class LoginPage {
 
     loginOK() {
         cy.url().should('include', 'totvs-menu/#/')
-        cy.get(loginElements.logoTOTVS())
+        cy.get(loginElements.usuarioLogado())
             .should('be.visible')
     }
 
     laborProcess() {
         cy.get(loginElements.inputPesquisar()).click()
-        cy.wait(4000)
+        cy.wait(3000)
         cy.get(loginElements.inputPesquisar())
-            .type('html.labor-process', { delay: 100 }) // Adiciona um delay para simular digitação mais realista
+            .type('html.labor-process', { delay: 100 }) 
         cy.get(loginElements.lupaPesquisa()).click()
         cy.get(loginElements.abrirLaborProcess()).click()
         cy.get(loginElements.btnExecutar()).click()
     }
 
     programaOK() {
-        cy.getIframeBody('#extView2').find(loginElements.loginOk()) 
+        cy.get(loginElements.loginOk()) 
             .should('be.visible')
             .and('have.attr', 'src', 'assets/img/logo_totvs.png')
     }

@@ -12,5 +12,5 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands';
-import '@badeball/cypress-cucumber-preprocessor';
 import '../e2e/hooks.cy';
+import 'cypress-iframe';

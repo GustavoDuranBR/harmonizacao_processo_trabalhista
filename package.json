@@ -11,10 +11,10 @@
   "author": "Gustavo Duran",
   "license": "ISC",
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
     "@cucumber/cucumber": "^11.0.0",
-    "cypress": "^13.14.2"
+    "cypress": "^13.14.2",
+    "cypress-iframe": "^1.0.1"
   },
   "dependencies": {
     "cucumber": "^6.0.7",

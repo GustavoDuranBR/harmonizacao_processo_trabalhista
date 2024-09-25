@@ -1,30 +1,39 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import S2500Page from "../pages/S2500_page";
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
+import S2500Page from "../pages/S2500_page"
+import LoginPage from "../pages/login_page"
 
-// Instanciando a classe S2500Page
-const s2500Page = new S2500Page();
+const s2500Page = new S2500Page()
+const loginPage = new LoginPage()
 
-// Os hooks serão executados automaticamente antes de cada cenário, não há necessidade de repetir o login ou a verificação de sessão
+// Passos relacionados ao login e à página dos programas
+Given(/^que o usuário já tenha realizado o login$/, () => {
+    loginPage.loginOK() // Garante que o login foi feito
+})
 
-Given("que o usuário esteja na aplicação Processo trabalhista", () => {
-    s2500Page.acessoS2500Ok();
-    s2500Page.paginaS2500();
-});
+Then(/^o usuário esteja na página dos programas$/, () => {
+    loginPage.programaOK() // Verifica se está na página correta
+})
 
-Then("clique no botão Adicionar Processo", () => {
-    s2500Page.btnAdcProc();
-});
+// Passos relacionados à funcionalidade de Processo Trabalhista
+Then(/^que o usuário esteja na aplicação Processo trabalhista$/, () => {
+    loginPage.laborProcess() 
+})
 
-Then("esteja na página Cadastro de processo trabalhista", () => {
-    s2500Page.cadastroProcTrab()
-    .should('be.visible')
-    .and('contain', 'Cadastro de Processo Trabalhista');
-});
+Then(/^clique no botão Adicionar Processo$/, () => {
+    s2500Page.paginaS2500()   
+    s2500Page.btnAdcProc()    
+})
 
-Then("selecione a opção {string} no campo Origem do Processo", (opcao) => {
-    s2500Page.selecProcJudicial().select(opcao);
-});
+Then(/^esteja na página Cadastro de processo trabalhista$/, () => {
+    s2500Page.tituloCadastroProcTrab() 
+})
 
-When("o campo Número do processo deve ser preenchido com {int} caracteres", (numCaracteres) => {
-    s2500Page.preencheCampo(numCaracteres);
-});
+// Seleção do tipo de processo no campo "Origem do Processo"
+Then(/^selecione a opção "([^"]*)" no campo Origem do Processo$/, (opcao) => {
+    s2500Page.selecOrigemProcesso(opcao) 
+})
+
+// Validação do campo "Número do Processo"
+When(/^o campo Número do processo deve ser preenchido com "([^"]*)" caracteres$/, (numCaracteres) => {
+    s2500Page.validarNumeroProcesso(numCaracteres) 
+})

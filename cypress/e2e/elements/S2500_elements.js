@@ -1,4 +1,8 @@
 class S2500Elements {
+    verificaUsuario = () => {
+        return "[ng-if='userName\.length \<\= 30']"
+    }
+
     urlS2500 = () => {
         return 'http://joisrvapldev027:8080/totvs-menu/#/totvs-menu/program-html/html.labor-process/'
     }
@@ -17,7 +21,7 @@ class S2500Elements {
     }
 
     campoOrigemProcesso = () => {
-        return "[id='po-combo\[21527997-c46d-c0ca-8d41-81d8073d1895\]']"
+        return ".custom-margin-help.ng-invalid.ng-pristine.ng-touched.po-md-6.po-pl-0 > po-field-container .po-combo-input.po-input-icon-right"
     }
 
     campoNumProcesso = () => {
@@ -74,7 +78,7 @@ class S2500Elements {
 
     // Elementos Botões
     btnAdcProc = () => {
-        return '.po-md-2.po-mt-4.po-sm-12 > .po-button'
+        return ".po-md-2.po-mt-4.po-sm-12 > .po-button"
     }
 
     btnSetaBaixo = () => {
