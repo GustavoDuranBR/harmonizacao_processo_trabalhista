@@ -21,7 +21,11 @@ class S2500Elements {
     }
 
     campoOrigemProcesso = () => {
-        return ".custom-margin-help.ng-invalid.ng-pristine.ng-touched.po-md-6.po-pl-0 > po-field-container .po-combo-input.po-input-icon-right"
+        return "[id='po-combo\\[91c15ffb-7bf7-fbc4-8426-c61d9ba235b4\\]']"
+    }
+    
+    opcaoProcessoJudicial() {
+        return ".custom-margin-help.ng-dirty.ng-touched.ng-valid.po-md-6.po-pl-0 po-listbox ul[role='listbox'] > li:nth-of-type(1) > po-item-list .po-item-list-label";
     }
 
     campoNumProcesso = () => {
