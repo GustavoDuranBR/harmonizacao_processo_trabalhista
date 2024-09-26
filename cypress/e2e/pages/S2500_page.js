@@ -25,7 +25,7 @@ class S2500Page {
             .should('be.visible').contains('Cadastro de processo trabalhista');
     }
 
-    selecOrigemProcesso(opcao) {
+    selecOrigemProcesso() {
         cy.getIframeBody().find(s2500Elements.campoOrigemProcesso()).click({ force: true })
         cy.getIframeBody().find(s2500Elements.opcaoProcessoJudicial()).click({ force: true });
     }

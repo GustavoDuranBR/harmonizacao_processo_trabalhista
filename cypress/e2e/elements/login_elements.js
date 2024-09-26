@@ -1,44 +1,44 @@
 class LoginElements {
-    textoBoasVindas = () => {
+    textoBoasVindas() {
         return '.caption-text'
     }
-    campoUsuario = () => {
+    campoUsuario() {
         return 'input#txtUsername'
     }
 
-    campoSenha = () => {
+    campoSenha() {
         return 'input#txtPassword'
     }
 
-    btnEntrar = () => {
+    btnEntrar() {
         return '.btnEntrar'
     }
 
-    logoTOTVS = () => {
+    logoTOTVS() {
         return 'div#menu-header > .header-title.hidden-xs'
     }
 
-    usuarioLogado = () => {
+    usuarioLogado() {
         return "[ng-if='userName\.length \<\= 30']"
     }
 
-    inputPesquisar = () => {
+    inputPesquisar() {
         return 'input#keywords'
     }
 
-    lupaPesquisa = () => {
+    lupaPesquisa() {
         return '.glyphicon.glyphicon-search'
     }
 
-    abrirLaborProcess = () => {
+    abrirLaborProcess() {
         return '.ng-scope > td[title="Processos Trabalhistas eSocial"]'
     }
 
-    btnExecutar = () => {
+    btnExecutar() {
         return '.btn.btn-primary.ng-binding'
     }
 
-    loginOk = () => {
+    loginOk() {
         return 'div#menu-logo > img'
     }
 } export default LoginElements;

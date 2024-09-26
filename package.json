@@ -13,8 +13,13 @@
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
     "@cucumber/cucumber": "^11.0.0",
+    "@eslint/js": "^9.11.1",
     "cypress": "^13.14.2",
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "eslint": "^9.11.1",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-cypress": "^3.5.0",
+    "globals": "^15.9.0"
   },
   "dependencies": {
     "cucumber": "^6.0.7",

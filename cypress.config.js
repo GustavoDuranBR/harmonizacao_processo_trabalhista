@@ -6,7 +6,7 @@ module.exports = defineConfig({
   e2e: {
     defaultCommandTimeout: 10000,
     specPattern: "**/*.feature",
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on) {
       on('file:preprocessor', cucumber());
       on("before:browser:launch", (browser = {}, launchOptions) => {
         if (browser.name === 'chrome') {
