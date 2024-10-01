@@ -21,19 +21,19 @@ class S2500Elements {
     }
 
     campoOrigemProcesso() {
-        return "[id='po-combo\\[91c15ffb-7bf7-fbc4-8426-c61d9ba235b4\\]']"
+        return ".custom-margin-help.ng-invalid.ng-pristine.ng-untouched.po-md-6.po-pl-0 > po-field-container .po-combo-input.po-input-icon-right"
     }
     
     opcaoProcessoJudicial() {
-        return ".custom-margin-help.ng-dirty.ng-touched.ng-valid.po-md-6.po-pl-0 po-listbox ul[role='listbox'] > li:nth-of-type(1) > po-item-list .po-item-list-label";
+        return ".po-item-list-label:contains('Processo Judicial')"
     }
 
     campoNumProcesso() {
-        return "#po-input\[f2cf25c4-a4ef-c031-f89a-a3a53c645487\]"
+        return ".custom-margin-help.ng-invalid.ng-pristine.ng-untouched.po-md-6.po-pr-0 > po-field-container .po-input"
     }
 
     campoObservacao() {
-        return "[rows='3']"
+        return ".po-textarea"
     }
 
     campoCodMunicipio() {
@@ -41,7 +41,7 @@ class S2500Elements {
     }
 
     campoUF() {
-        return "[id='po-combo\[92e41797-3c26-3006-846d-e8a75bda1c54\]']"
+        return ".custom-margin-help.ng-dirty.ng-touched.ng-valid.po-md-2 > po-field-container .po-combo-input.po-input-icon-right"
     }
 
     campoIndVara() {

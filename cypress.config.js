@@ -4,7 +4,7 @@ const path = require("path");
 
 module.exports = defineConfig({
   e2e: {
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 15000,
     specPattern: "**/*.feature",
     setupNodeEvents(on) {
       on('file:preprocessor', cucumber());

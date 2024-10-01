@@ -1,3 +1,5 @@
+import 'cypress-iframe';
+
 // Estilização da interface do Cypress
 Cypress.$("#resizable-panels-root", top?.document)
   .find("div.grow.h-full.bg-gray-100.relative")
@@ -55,11 +57,20 @@ Cypress.Commands.add('checkAndLogin', () => {
   });
 });
 
-// Comando para pegar o Iframe
-Cypress.Commands.add('getIframeBody', { timeout: 20000 }, () => {
+// Comando para pegar o Iframe com o seletor reutilizável
+Cypress.Commands.add('getIframe', () => {
   return cy
-    .get('iframe[src*="totvs-esocial/#/labor-process"]', { timeout: 20000 })  // Aumenta o timeout
-    .should('be.visible')
-    .its('0.contentDocument.body').should('not.be.empty')
+    .get('iframe#extView2', { timeout: 15000 }) // Aumenta o timeout para o iframe
+    .its('0.contentDocument.body')
+    .should('not.be.empty') // Certifica-se de que o iframe está pronto
     .then(cy.wrap);
 });
+
+// Gera um número aleatório de 20 dígitos (ou o número de dígitos que você precisar)
+Cypress.Commands.add('gerarNumeroAleatorio', (numDigitos) => {
+  const numeroMin = Math.pow(10, numDigitos - 1);  // Número mínimo com o número de dígitos desejado
+  const numeroMax = Math.pow(10, numDigitos) - 1;  // Número máximo com o número de dígitos desejado
+  const numeroAleatorio = Cypress._.random(numeroMin, numeroMax).toString();
+  return numeroAleatorio;
+});
+

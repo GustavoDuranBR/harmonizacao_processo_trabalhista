@@ -14,3 +14,4 @@
 import './commands';
 import '../e2e/hooks.cy';
 import 'cypress-iframe';
+import 'cypress-plugin-tab';
