@@ -22,11 +22,19 @@ module.exports = defineConfig({
     browser: 'chrome',
     tags: '@login or @api and not @ignore',
     baseUrl: 'http://joisrvapldev027:8080',
-    
+
     // Definição das variáveis de ambiente
     env: {
       username: 'super',
       password: 'super'
+    },
+    // Configuração do Mochawesome
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: true,
+      json: true
     }
   }
 });

@@ -55,6 +55,6 @@ Then('o campo Indicador da vara com o código {string}', (vara) => {
     s2500Page.preencherVara(vara)
 })
 
-When('o campo Data da conciliação {string}', (dtCon) => {
-    s2500Page.selecUf(dtCon)
+Then('o campo Data da conciliação {string}', (dtCon) => {
+    s2500Page.preencherDtConc(dtCon)
 })

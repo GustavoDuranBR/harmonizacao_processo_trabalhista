@@ -18,13 +18,11 @@ Cypress.Commands.add('loginAndSaveSession', (username, password) => {
   cy.visit('/totvs-login');
   cy.get('input#txtUsername').type(username);
   cy.get('input#txtPassword').type(password);
-  cy.get('.btnEntrar').click();
-  
-  // Captura o JSESSIONID e armazena
-  cy.getCookie('JSESSIONID').then((cookie) => {
-    if (cookie) {
-      cy.wrap(cookie).as('sessionCookie');
-    }
+  cy.get('.btnEntrar').click().then(() => {
+      // Certifique-se de que o cookie é capturado após o clique
+      cy.getCookie('JSESSIONID').should('exist').then((cookie) => {
+          cy.wrap(cookie).as('sessionCookie');
+      });
   });
 });
 

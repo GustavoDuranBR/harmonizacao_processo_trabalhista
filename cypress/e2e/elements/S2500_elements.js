@@ -41,15 +41,19 @@ class S2500Elements {
     }
 
     campoUF() {
-        return ".custom-margin-help.ng-dirty.ng-touched.ng-valid.po-md-2 > po-field-container .po-combo-input.po-input-icon-right"
-    }
+        return ".po-field-container .po-combo-input.po-input-icon-right"
+    }  
+
+    escolherUf() {
+        return "li:contains('SP')"
+    }    
 
     campoIndVara() {
         return "[class='po-md-4 custom-margin-help ng-untouched ng-pristine ng-invalid'] po-field-container .po-field-container .po-field-container-content [tabindex='0']"
     }
 
     campoDtSentenca() {
-        return "[id='po-datepicker\[853f94e9-03f3-8644-a895-c2c44032a76e\]']"
+        return 'po-datepicker[formcontrolname="dtSent"] input.po-input.po-datepicker'
     }
 
     campoAmbito() {
@@ -61,7 +65,7 @@ class S2500Elements {
     }
 
     campoDtConciliacao() {
-        return "[id='po-datepicker\[52ebd754-0925-4254-4a6c-31921c7b339e\]']"
+        return ""
     }
 
     identPessoaTrabContrTrabalho() {

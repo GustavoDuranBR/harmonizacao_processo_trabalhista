@@ -61,25 +61,21 @@ class S2500Page {
             .should('exist')
             .should('be.visible')
             .clear()
-            .type(numMunicipio, {force: true});
+            .type(numMunicipio, {force: true})
     } 
 
     selecUf(uf) {
-        // Primeiro, verifique se o iframe está sendo capturado corretamente
-        cy.getIframe()
-            .find(s2500Elements.campoUF())  // Utilize o seletor existente de 'campoUF'
-            .scrollIntoView()  // Garante que o campo esteja visível na tela
-            .should('exist')   // Verifica se o campo existe
-            .should('be.visible')  // Verifica se está visível
-            .clear()  // Limpa qualquer valor existente
-            .type(uf, {force: true});  // Digita o UF desejado no campo
-    
-        // Agora, selecione a opção correta (por exemplo, "SP")
-        cy.getIframe()
-            .find('span.po-item-list-label')  // Utilize o seletor de label
-            .contains(uf)  // Busca o texto correspondente ao valor digitado
-            .click({force: true});  // Força o clique
-    }   
+        cy.getIframe().find(s2500Elements.campoUF())
+            .eq(2)
+            .should('exist')
+            .should('be.visible')
+            .first()
+            .click({ force: true })
+        cy.getIframe().find(s2500Elements.escolherUf())
+            .should('exist')
+            .contains(uf)
+            .click({ force: true });
+    }
     
     preencherVara(vara) {
         cy.getIframe().find(s2500Elements.campoIndVara())
@@ -91,12 +87,11 @@ class S2500Page {
     }
     
     preencherDtConc(dtCon) {
-        cy.getIframe().find(s2500Elements.campoDtConciliacao())
-            .scrollIntoView()
-            .should('exist')
-            .should('be.visible')
-            .clear()
-            .type(dtCon, {force: true});
-    }    
+        cy.getIframe().find(s2500Elements.campoDtSentenca())
+            .should('exist')         
+            .should('be.visible')     
+            .click({ force: true })   
+            .type(dtCon, { force: true })
+    }
 }
 export default S2500Page;
