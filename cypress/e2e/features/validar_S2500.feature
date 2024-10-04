@@ -11,4 +11,13 @@ Feature: Realizar o Login e validar campos do evento S-2500
     Then o campo município com o código "3541406"
     Then o campo UF com "SP"
     Then o campo Indicador da vara com o código "101"
-    When o campo Data da conciliação "01/01/2024"
+    Then o campo Data da conciliação "01/01/2024"
+    Then clico para acessar Identificação da pessoa trabalhadora e contrato de trabalho 
+    Then preencho com o nome "Jaqueline Sabrina Daniela Dias"
+    Then preencho o campo com o CPF inválido "11111111111"
+    Then preencho o campo Data de Nascimento fora do período "01/01/1889"
+    Then clico no botão Adicionar Contrato
+    Then clico no botão "Por que não consigo salvar?"
+    Then clico no item "O campo Tipo de vínculo da aba Informações gerais está inválido."
+    Then acesso a aba "Informações gerais" e seleciono "Trabalhador com vínculo formalizado, sem alteração nas datas de admissão e de desligamento"
+    Then selecionar a opção "Não" no campo Informações do evento

@@ -71,4 +71,3 @@ Cypress.Commands.add('gerarNumeroAleatorio', (numDigitos) => {
   const numeroAleatorio = Cypress._.random(numeroMin, numeroMax).toString();
   return numeroAleatorio;
 });
-

@@ -7,7 +7,7 @@ const loginPage = new LoginPage()
 
 // Passos relacionados ao login e à página dos programas
 Given('que o usuário já tenha realizado o login', () => {
-    loginPage.loginOK() // Garante que o login foi feito
+    loginPage.loginOK() 
 })
 
 Then('o usuário esteja na página dos programas', () => {
@@ -57,4 +57,43 @@ Then('o campo Indicador da vara com o código {string}', (vara) => {
 
 Then('o campo Data da conciliação {string}', (dtCon) => {
     s2500Page.preencherDtConc(dtCon)
+})
+
+Then('clico para acessar Identificação da pessoa trabalhadora e contrato de trabalho', () => {
+    s2500Page.identPessoaTrab()
+})
+
+
+Then('preencho com o nome {string}', (nome) => {
+	s2500Page.nomePessTrab(nome)
+})
+
+Then('preencho o campo com o CPF inválido {string}', (cpf) => {
+	s2500Page.preencheCPF(cpf)
+})
+
+Then('preencho o campo Data de Nascimento fora do período {string}', (dtNasc) => {
+	s2500Page.preencheDtNasc(dtNasc)
+})
+
+Then('clico no botão Adicionar Contrato', () => {
+    s2500Page.btnAdicCont()
+})
+
+
+Then('clico no botão {string}', (btn) => {
+	s2500Page.btnNaoConsSalvar(btn)
+})
+
+Then('clico no item {string}', (tpVinc) => {
+	s2500Page.abriListPenTipoVinc(tpVinc);
+})
+
+Then('acesso a aba {string} e seleciono {string}', (infoGeral, vinculo) => {
+    s2500Page.abaInfoContrTrabIdentEstab(infoGeral)
+	s2500Page.selecionoTipoVinculo(vinculo)
+})
+
+Then('selecionar a opção {string} no campo Informações do evento', (selectNao) => {
+    s2500Page.preencherInfoEvento(selectNao)
 })

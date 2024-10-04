@@ -17,7 +17,7 @@ class LoginPage {
     }
 
     loginOK() {
-        cy.url().should('include', 'totvs-menu/#/')
+        cy.url().should('contain', 'totvs-menu/#/')
         cy.get(loginElements.usuarioLogado())
             .should('be.visible')
     }

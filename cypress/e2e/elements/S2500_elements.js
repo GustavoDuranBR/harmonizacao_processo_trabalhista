@@ -69,19 +69,36 @@ class S2500Elements {
     }
 
     identPessoaTrabContrTrabalho() {
-        return "[data-item-list='177198c7-c954-215c-b286-27883583cb78'] [aria-disabled='false'] .po-item-list-label"
+        return "po-tab-button:nth-of-type(2) > div[role='tab'] > .po-tab-button-label.po-text-ellipsis"
     }
 
     campoNomeTrabalhador() {
-        return "[id='po-input\[209b6c3d-48b4-f24b-b711-53d22d52959e\]']"
+        return 'po-input[formcontrolname="nmTrab"] .po-field-container input.po-input'
     }
 
     campoCPF() {
-        return "[id='po-input\[3df4f5c2-a5ce-4fe7-4b71-388eed8eb461\]']"
+        return ".custom-margin-help.ng-invalid.ng-pristine.ng-untouched.po-md-2 > po-field-container .po-input"
     }
 
     campoDtNasc() {
-        return "[id='po-datepicker\[fbf6d494-f4d5-63e4-ae41-b5b7967b8ce2\]']"
+        return "input[name='datepicker']"
+    }
+
+    // Informações sobre o contrato de trabalho
+    campoTipoVinculo() {
+        return 'input.po-combo-input.po-input-icon-right[autocomplete="off"][required][id^="po-combo"]'
+    }
+
+    escolherTipoVinculo() {
+        return "li:contains('Trabalhador com vínculo formalizado, sem alteração nas datas de admissão e de desligamento')"
+    }
+
+    campoInfEvento() {
+        return 'input.po-combo-input.po-input-icon-right[autocomplete="off"][required][id^="po-combo"]';
+    }
+    
+    escolherInfEvento() {
+        return "li:contains('Não')"
     }
 
     // Elementos Botões
@@ -94,7 +111,11 @@ class S2500Elements {
     }
 
     btnAdicContrato() {
-        return "[class='po-mt-2'] [p-size='medium']"
+        return 'po-button[p-icon="po-icon po-icon-plus-circle"] button'
+    }
+
+    btnPqNaoConsSalvar() {
+        return 'button.po-button span.po-button-label'
     }
 
     // Mensagens de validação
@@ -139,7 +160,23 @@ class S2500Elements {
     }
 
     msgCpfInvalidoPessoaTrabalhadora() {
-        return "[class='message ng-tns-c3168488692-3']"
+        return 'span.message[role="alert"]'
+    }
+
+    msgDtNascForaPeriodo() {
+        return '.po-field-container-bottom-text-error.ng-star-inserted span'
+    }
+
+    listPqNaoSalvar() {
+        return ".po-page-slide-content"
+    }
+
+    listTipoVinc() {
+        return "app-labor-process app-employment-contract-modal po-page-slide .po-page-slide-body app-blue-info:nth-child(1) po-container span.po-font-text-large";
+    }   
+
+    abasInfGerais() {
+        return "div.po-accordion-item-header-title.po-text-ellipsis"
     }
 
 } export default S2500Elements;
