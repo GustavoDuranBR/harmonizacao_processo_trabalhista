@@ -1,5 +1,12 @@
 # Projeto de Testes Automatizados - Eventos S-2500 e S-2501
 
+![Node.js](https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Cypress](https://img.shields.io/badge/cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
+![Cucumber](https://img.shields.io/badge/cucumber-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)
+![Mochawesome](https://img.shields.io/badge/mochawesome-8D6748?style=for-the-badge&logo=mocha&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 Este projeto tem como objetivo implementar testes automatizados para os eventos S-2500 e S-2501 do Processo Trabalhista, utilizando Cypress em conjunto com Cucumber. A automação desses testes visa garantir a qualidade e a confiabilidade do sistema em desenvolvimento, facilitando a validação das funcionalidades.
 
 ## Tecnologias Utilizadas
