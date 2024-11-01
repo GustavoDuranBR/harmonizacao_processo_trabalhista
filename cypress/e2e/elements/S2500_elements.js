@@ -90,8 +90,8 @@ class S2500Elements {
     }
 
     escolherTipoVinculo() {
-        return "li:contains('Trabalhador com vínculo formalizado, sem alteração nas datas de admissão e de desligamento')"
-    }
+        return "li .po-item-list-label:contains('Empregado com reconhecimento de vínculo')";
+    }    
 
     campoInfEvento() {
         return 'input.po-combo-input.po-input-icon-right[autocomplete="off"][required][id^="po-combo"]';
