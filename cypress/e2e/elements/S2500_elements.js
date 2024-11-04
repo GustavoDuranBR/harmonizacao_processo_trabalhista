@@ -98,7 +98,7 @@ class S2500Elements {
     }
     
     escolherInfEvento() {
-        return "li:contains('Não')"
+        return "li:contains('Sim')"
     }
 
     // Elementos Botões

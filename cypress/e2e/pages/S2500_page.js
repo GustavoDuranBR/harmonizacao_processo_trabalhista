@@ -176,7 +176,7 @@ class S2500Page {
             .click({ force: true })
     }
 
-    preencherInfoEvento(selectNao) {
+    preencherInfoEvento(selectSim) {
         cy.getIframe().find(s2500Elements.campoInfEvento())
             .eq(1)
             .should('exist')
@@ -184,7 +184,7 @@ class S2500Page {
             .click({ force: true })
         cy.getIframe().find(s2500Elements.escolherInfEvento())
             .should('exist')
-            .contains(selectNao)
+            .contains(selectSim)
             .click({ force: true })
     }
     

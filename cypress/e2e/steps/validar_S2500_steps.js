@@ -94,6 +94,6 @@ Then('acesso a aba {string} e seleciono {string}', (infoGeral, vinculo) => {
 	s2500Page.selecionoTipoVinculo(vinculo)
 })
 
-Then('selecionar a opção {string} no campo Informações do evento', (selectNao) => {
-    s2500Page.preencherInfoEvento(selectNao)
+Then('selecionar a opção {string} no campo Informações do evento', (selectSim) => {
+    s2500Page.preencherInfoEvento(selectSim)
 })
