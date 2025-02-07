@@ -52,7 +52,7 @@ class S2500Page {
             .should('exist')
             .should('be.visible')
             .clear()
-            .type(msgCypress, { force: true });
+            .type(msgCypress, { force: true })
     }
 
     preencherNumMunicipio(numMunicipio) {
@@ -74,7 +74,7 @@ class S2500Page {
         cy.getIframe().find(s2500Elements.escolherUf())
             .should('exist')
             .contains(uf)
-            .click({ force: true });
+            .click({ force: true })
     }
 
     preencherVara(vara) {
@@ -83,7 +83,7 @@ class S2500Page {
             .should('exist')
             .should('be.visible')
             .clear()
-            .type(vara, { force: true });
+            .type(vara, { force: true })
     }
 
     preencherDtConc(dtCon) {
@@ -176,7 +176,7 @@ class S2500Page {
             .click({ force: true })
     }
 
-    preencherInfoEvento(selectSim) {
+    preencherInfoEvento(selectSimEvento) {
         cy.getIframe().find(s2500Elements.campoInfEvento())
             .eq(1)
             .should('exist')
@@ -184,10 +184,22 @@ class S2500Page {
             .click({ force: true })
         cy.getIframe().find(s2500Elements.escolherInfEvento())
             .should('exist')
-            .contains(selectSim)
+            .should('be.visible')
+            .contains(selectSimEvento)
             .click({ force: true })
     }
-    
+
+    preencherReintegracao(selectSimReint) {
+        cy.getIframe().find(s2500Elements.campoReintegracao())
+            .should('exist')
+            .should('be.visible')
+            .click({ force: true })
+        cy.getIframe().find(s2500Elements.escolherReintegracao())
+            .should('exist')
+            .should('be.visible')
+            .contains(selectSimReint)  
+            .click({ force: true })
+    }          
 }
 
-export default S2500Page;
+export default S2500Page

@@ -23,7 +23,7 @@ class LoginElements {
     }
 
     inputPesquisar() {
-        return 'input#keywords'
+        return "[ng-model='keywords']"
     }
 
     lupaPesquisa() {

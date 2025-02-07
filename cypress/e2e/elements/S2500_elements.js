@@ -23,7 +23,7 @@ class S2500Elements {
     campoOrigemProcesso() {
         return ".custom-margin-help.ng-invalid.ng-pristine.ng-untouched.po-md-6.po-pl-0 > po-field-container .po-combo-input.po-input-icon-right"
     }
-    
+
     opcaoProcessoJudicial() {
         return ".po-item-list-label:contains('Processo Judicial')"
     }
@@ -42,11 +42,11 @@ class S2500Elements {
 
     campoUF() {
         return ".po-field-container .po-combo-input.po-input-icon-right"
-    }  
+    }
 
     escolherUf() {
         return "li:contains('SP')"
-    }    
+    }
 
     campoIndVara() {
         return "[class='po-md-4 custom-margin-help ng-untouched ng-pristine ng-invalid'] po-field-container .po-field-container .po-field-container-content [tabindex='0']"
@@ -91,14 +91,22 @@ class S2500Elements {
 
     escolherTipoVinculo() {
         return "li .po-item-list-label:contains('Empregado com reconhecimento de vínculo')";
-    }    
+    }
 
     campoInfEvento() {
         return 'input.po-combo-input.po-input-icon-right[autocomplete="off"][required][id^="po-combo"]';
     }
-    
+
     escolherInfEvento() {
-        return "li:contains('Sim')"
+        return "li .po-item-list-label:contains('Sim')"
+    }
+
+    campoReintegracao() {
+        return '.po-md-6.po-p-0 .custom-margin-help.po-md-3 po-field-container .po-combo-input.po-input-icon-right';
+    }
+
+    escolherReintegracao() {
+        return '.po-md-6.po-p-0 .custom-margin-help.po-md-3 po-field-container po-listbox ul[role="listbox"] > li:nth-of-type(2) .ng-star-inserted .po-item-list.po-item-list__option'
     }
 
     // Elementos Botões
@@ -173,7 +181,7 @@ class S2500Elements {
 
     listTipoVinc() {
         return "app-labor-process app-employment-contract-modal po-page-slide .po-page-slide-body app-blue-info:nth-child(1) po-container span.po-font-text-large";
-    }   
+    }
 
     abasInfGerais() {
         return "div.po-accordion-item-header-title.po-text-ellipsis"

@@ -21,12 +21,12 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     browser: 'chrome',
     tags: '@login or @api and not @ignore',
-    baseUrl: 'http://joisrvapldev027:8080',
+    baseUrl: 'http://engjv-ecapp01:8482',
 
     // Definição das variáveis de ambiente
     env: {
       username: 'super',
-      password: 'super'
+      password: 'super@123'
     },
     // Configuração do Mochawesome
     reporter: 'mochawesome',

@@ -21,3 +21,4 @@ Feature: Realizar o Login e validar campos do evento S-2500
     Then clico no item "O campo Tipo de vínculo da aba Informações gerais está inválido."
     Then acesso a aba "Informações gerais" e seleciono "Empregado com reconhecimento de vínculo"
     Then selecionar a opção "Sim" no campo Informações do evento
+    Then selecionar a opção "Sim" no campo Reintegração
