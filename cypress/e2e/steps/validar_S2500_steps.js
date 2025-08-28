@@ -86,7 +86,7 @@ Then('clico no botão {string}', (btn) => {
 })
 
 Then('clico no item {string}', (tpVinc) => {
-	s2500Page.abriListPenTipoVinc(tpVinc);
+	s2500Page.abriListPenTipoVinc(tpVinc)
 })
 
 Then('acesso a aba {string} e seleciono {string}', (infoGeral, vinculo) => {
@@ -128,4 +128,16 @@ Then('preencho o campo Tipo de inscrição com {string}', (tipInscricao) => {
 
 Then('selecionar a opção {string} no campo Indicativo de repercussão', (indicaReperc) => {
     s2500Page.selecionarIndiRepercussao(indicaReperc)
+})
+
+Then('preencher a data {string} no campo Competência inicial', (dataCompetencia) => {
+  s2500Page.preencherDataCompetenciaInicial(dataCompetencia)
+})
+
+Then('preencher a data {string} no campo Competência Final', (dataCompetencia) => {
+  s2500Page.preencherDataCompetenciaFinal(dataCompetencia)
+})
+
+Then('clicar na opção {string}', () => {
+  s2500Page.clicarIdentificacaoPeriodo()
 })

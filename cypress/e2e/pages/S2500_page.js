@@ -282,6 +282,36 @@ class S2500Page {
             .contains(opcao)
             .click({ force: true });
     }
+
+    //Competência Inicial
+    preencherDataCompetenciaInicial(data) {
+        cy.getIframe()
+            .find(s2500Elements.campoCompetenciaInicial())
+            .should('exist')
+            .scrollIntoView()
+            .should('be.visible')
+            .type(data, { force: true });
+    }
+
+    //Competência Final
+    preencherDataCompetenciaFinal(data) {
+        cy.getIframe()
+            .find(s2500Elements.campoCompetenciaFinal())
+            .should('exist')
+            .scrollIntoView()
+            .should('be.visible')
+            .type(data, { force: true });
+    }
+
+    //Clicar em Identificação do Período
+    clicarIdentificacaoPeriodo() {
+        cy.getIframe()
+            .find(s2500Elements.identificacaoPeriodo())
+            .contains('Identificação do período')
+            .scrollIntoView()
+            .should('be.visible')
+            .click({ force: true });
+        }
 }
 
 export default S2500Page

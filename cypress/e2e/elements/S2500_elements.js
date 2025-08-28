@@ -86,11 +86,11 @@ class S2500Elements {
     }
 
     escolherTipoVinculo() {
-        return "li .po-item-list-label:contains('Empregado com reconhecimento de vínculo')";
+        return "li .po-item-list-label:contains('Empregado com reconhecimento de vínculo')"
     }
 
     campoInfEvento() {
-        return 'input.po-combo-input.po-input-icon-right[autocomplete="off"][required][id^="po-combo"]';
+        return 'input.po-combo-input.po-input-icon-right[autocomplete="off"][required][id^="po-combo"]'
     }
 
     escolherInfEvento() {
@@ -224,7 +224,7 @@ class S2500Elements {
     }
 
     listTipoVinc() {
-        return "app-labor-process app-employment-contract-modal po-page-slide .po-page-slide-body app-blue-info:nth-child(1) po-container span.po-font-text-large";
+        return "app-labor-process app-employment-contract-modal po-page-slide .po-page-slide-body app-blue-info:nth-child(1) po-container span.po-font-text-large"
     }
 
     abasInfGerais() {
@@ -235,5 +235,17 @@ class S2500Elements {
         return 'po-combo[p-label="Indicativo de repercussão"]'
     }
 
-} export default S2500Elements;
+    campoCompetenciaInicial() {
+        return 'po-input[p-label="Competência inicial"] input'
+    }
+
+    campoCompetenciaFinal() {
+        return 'po-input[p-label="Competência final"] input'
+    }
+
+    identificacaoPeriodo() {
+        return '.po-accordion-item-header-title'
+    }
+
+} export default S2500Elements
 
