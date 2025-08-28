@@ -22,3 +22,12 @@ Feature: Realizar o Login e validar campos do evento S-2500
     Then acesso a aba "Informações gerais" e seleciono "Empregado com reconhecimento de vínculo"
     Then selecionar a opção "Sim" no campo Informações do evento
     Then selecionar a opção "Sim" no campo Reintegração
+    Then selecionar a opção "Sim" no campo Reconhecimento de categoria 
+    Then selecionar a opção "Sim" no campo Reconhecimento da natureza atividade
+    Then selecionar a opção "Sim" no campo Reconhecimento de motivo de desligamento
+    Then preencho o campo Matrícula do contrato com "6785265265785" 
+    Then selecionar a opção "CNPJ" no campo Tipo de inscrição
+    Then preencho o campo Tipo de inscrição com "79938702819633" 
+    Then selecionar a opção "Decisão com repercussão tributária e/ou FGTS com rendimentos informados em S-2501" no campo Indicativo de repercussão
+
+    

@@ -4,7 +4,7 @@ class S2500Elements {
     }
 
     urlS2500() {
-        return 'http://joisrvapldev027:8080/totvs-menu/#/totvs-menu/program-html/html.labor-process/'
+        return 'http://jv-rm-homrh01:8180/totvs-menu/#/totvs-menu/program-html/html.labor-process/'
     }
 
     tituloProcessoTrabalhista() {
@@ -12,10 +12,6 @@ class S2500Elements {
     }
 
     // Elementos dos campos
-    campoTipoInscricao() {
-        return "[id='po-combo\[a9ade595-da80-af4a-8787-8cb9022e4aa3\]']"
-    }
-
     campoNumInscricao() {
         return "[id='po-input\[6e5e8210-7742-2c48-e0ac-1321d305f872\]']"
     }
@@ -102,13 +98,61 @@ class S2500Elements {
     }
 
     campoReintegracao() {
-        return '.po-md-6.po-p-0 .custom-margin-help.po-md-3 po-field-container .po-combo-input.po-input-icon-right';
+        return '.po-md-6.po-p-0 .custom-margin-help.po-md-3 po-field-container .po-combo-input.po-input-icon-right'
     }
 
     escolherReintegracao() {
         return '.po-md-6.po-p-0 .custom-margin-help.po-md-3 po-field-container po-listbox ul[role="listbox"] > li:nth-of-type(2) .ng-star-inserted .po-item-list.po-item-list__option'
     }
 
+    campoReconhecimentoCategoria() {
+        return 'po-combo[formcontrolname="indCateg"] input.po-combo-input'
+    }
+
+    escolherReconhecimentoCategoria() {
+        return 'ul[role="listbox"] .po-item-list__option'
+    }
+
+    //Reconhecimento da natureza atividade
+    campoRecNatAtividade() {
+        return 'po-combo[formcontrolname="indNatAtiv"] input.po-combo-input'
+    }
+
+    escolherRecNatAtividade() {
+        return 'ul[role="listbox"] .po-item-list__option'
+    }
+
+    //Reconhecimento de motivo de desligamento
+    campoRecMotDesligamento() {
+        return 'po-combo[formcontrolname="indMotDeslig"] input.po-combo-input'
+    }
+
+    escolherRecMotDesligamento() {
+        return 'ul[role="listbox"] .po-item-list__option'
+    }
+
+    //Tipo de inscrição
+    campoTipoInscricao() {
+        return 'po-combo[formcontrolname="tpInsc"] input.po-combo-input'
+    }
+
+    escolherTipoInscricao() {
+        return '.po-combo-container:not([hidden]) .po-item-list__option'
+    }
+
+    preencheTipoInscricao() {
+        return 'po-input[p-label="Número de inscrição"] input'
+    }
+
+    //Matrícula do contrato
+    campoMatriculaContrato() {
+        return 'po-input[formcontrolname="matricula"] input.po-input'
+    }
+
+    escolherRecMotDesligamento() {
+        return 'ul[role="listbox"] .po-item-list__option'
+    }
+    
     // Elementos Botões
     btnAdcProc() {
         return ".po-md-2.po-mt-4.po-sm-12 > .po-button"
@@ -185,6 +229,10 @@ class S2500Elements {
 
     abasInfGerais() {
         return "div.po-accordion-item-header-title.po-text-ellipsis"
+    }
+
+    campoIndicativoRepercussao () {
+        return 'po-combo[p-label="Indicativo de repercussão"]'
     }
 
 } export default S2500Elements;

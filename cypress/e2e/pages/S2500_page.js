@@ -103,8 +103,8 @@ class S2500Page {
         cy.getIframe().find(s2500Elements.campoNomeTrabalhador())
             .should('exist')
             .should('be.visible')
-            .click({force:true})
-            .type(nomeTrab, {force:true})
+            .click({ force: true })
+            .type(nomeTrab, { force: true })
     }
 
     preencheCPF(cpf) {
@@ -123,8 +123,8 @@ class S2500Page {
         cy.getIframe().find(s2500Elements.campoDtNasc())
             .should('exist')
             .should('be.visible')
-            .click({force:true})
-            .type(dtNasc, {force:true})
+            .click({ force: true })
+            .type(dtNasc, { force: true })
         // Verifica se a Data de Nascimento é inválido e se a mensagem de erro é exibida
         cy.getIframe().find(s2500Elements.msgDtNascForaPeriodo())
             .should('contain.text', ' Data fora do período')
@@ -133,7 +133,7 @@ class S2500Page {
 
     btnAdicCont() {
         cy.getIframe().find(s2500Elements.btnAdicContrato())
-            .click({force:true})
+            .click({ force: true })
     }
 
     btnNaoConsSalvar() {
@@ -141,18 +141,18 @@ class S2500Page {
             .contains('Por que não consigo salvar?')
             .should('exist')
             .should('be.visible')
-            .click({force:true})
+            .click({ force: true })
     }
 
     abriListPenTipoVinc(tpVinc) {
         cy.getIframe().find(s2500Elements.listPqNaoSalvar())
-            .click({force:true})
+            .click({ force: true })
         cy.wait(500)
         cy.getIframe().find(s2500Elements.listTipoVinc())
             .contains(tpVinc)
             .should('exist')
             .should('be.visible')
-            .click({force:true})
+            .click({ force: true })
     }
 
     abaInfoContrTrabIdentEstab() {
@@ -160,7 +160,7 @@ class S2500Page {
             .contains('Sessão de informação de contrato de trabalho e identificação do estabelecimento')
             .should('exist')
             .should('be.visible')
-            .click({force:true})
+            .click({ force: true })
     }
 
     selecionoTipoVinculo(vinculo) {
@@ -197,9 +197,91 @@ class S2500Page {
         cy.getIframe().find(s2500Elements.escolherReintegracao())
             .should('exist')
             .should('be.visible')
-            .contains(selectSimReint)  
+            .contains(selectSimReint)
             .click({ force: true })
-    }          
+    }
+
+    preencherReconhecimentoCategoria() {
+        cy.getIframe().find(s2500Elements.campoReconhecimentoCategoria())
+            .should('exist')
+            .should('be.visible')
+            .click({ force: true })
+        cy.getIframe().find(s2500Elements.escolherReconhecimentoCategoria())
+            .should('exist')
+            .should('be.visible')
+            .eq(14)
+            .click({ force: true })
+    }
+
+    preencherRecNatAtividade() {
+        cy.getIframe().find(s2500Elements.campoRecNatAtividade())
+            .should('exist')
+            .should('be.visible')
+            .click({ force: true })
+        cy.getIframe().find(s2500Elements.escolherRecNatAtividade())
+            .should('exist')
+            .should('be.visible')
+            .eq(16)
+            .click({ force: true })
+    }
+
+    //Reconhecimento de motivo de desligamento
+    preencherRecMotDesligamento() {
+        cy.getIframe().find(s2500Elements.campoRecMotDesligamento())
+            .should('exist')
+            .should('be.visible')
+            .click({ force: true })
+        cy.getIframe().find(s2500Elements.escolherRecMotDesligamento())
+            .should('exist')
+            .should('be.visible')
+            .eq(18)
+            .click({ force: true })
+    }
+
+    //Matrícula do contrato
+    preencherMatriculaContrato(matContr) {
+        cy.getIframe().find(s2500Elements.campoMatriculaContrato())
+            .should('exist')
+            .should('be.visible')
+            .click({ force: true })
+            .type(matContr, { force: true })
+    }
+
+    //Reconhecimento de motivo de desligamento
+    selecionarTipoInscricao() {
+        cy.getIframe().find(s2500Elements.campoTipoInscricao())
+            .should('exist')
+            .should('be.visible')
+            .eq(0)
+            .click({ force: true })
+        cy.getIframe().find(s2500Elements.escolherTipoInscricao())
+            .should('exist')
+            .should('be.visible')
+            .eq(0)
+            .click({ force: true })
+    }
+
+    //Tipo de Inscrição CNPJ
+    preencherTipoInscricao(tipInscricao) {
+        cy.getIframe().find(s2500Elements.preencheTipoInscricao())
+            .should('exist')
+            .should('be.visible')
+            .eq(0)
+            .type(tipInscricao, { force: true })
+    }
+
+    //Indicativo de repercussão
+    selecionarIndiRepercussao(opcao) {
+        cy.getIframe().find(s2500Elements.campoIndicativoRepercussao())
+            .should('exist')
+            .should('be.visible')
+            .click({ force: true });
+        
+        // Seleciona a opção com base no texto
+        cy.getIframe().find('po-listbox')
+            .contains(opcao)
+            .click({ force: true });
+    }
 }
 
 export default S2500Page

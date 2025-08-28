@@ -35,7 +35,7 @@ Then('selecione a opção Processo Judicial no campo Origem do Processo', () => 
 
 // Validação do campo "Número do Processo"
 Then('o campo Número do processo deve ser preenchido com {string} caracteres', (numCaracteres) => {
-    const digitos = '1'.repeat(numCaracteres); 
+    const digitos = '1'.repeat(numCaracteres) 
     s2500Page.preencheCampoNumeroAleatorio(digitos)
 })
 
@@ -100,4 +100,32 @@ Then('selecionar a opção {string} no campo Informações do evento', (selectSi
 
 Then('selecionar a opção {string} no campo Reintegração', (selectSimReint) => {
     s2500Page.preencherReintegracao(selectSimReint)
+})
+
+Then('selecionar a opção {string} no campo Reconhecimento de categoria', (selectSimRecCateg) => {
+    s2500Page.preencherReconhecimentoCategoria(selectSimRecCateg)
+})
+
+Then('selecionar a opção {string} no campo Reconhecimento da natureza atividade', (selectSimRecCateg) => {
+    s2500Page.preencherRecNatAtividade(selectSimRecCateg)
+})
+
+Then('selecionar a opção {string} no campo Reconhecimento de motivo de desligamento', (selectSimRecCateg) => {
+    s2500Page.preencherRecMotDesligamento(selectSimRecCateg)
+})
+
+Then('preencho o campo Matrícula do contrato com {string}', (matContr) => {
+    s2500Page.preencherMatriculaContrato(matContr)
+})
+
+Then('selecionar a opção {string} no campo Tipo de inscrição', (selectCNPJ) => {
+    s2500Page.selecionarTipoInscricao(selectCNPJ)
+})
+
+Then('preencho o campo Tipo de inscrição com {string}', (tipInscricao) => {
+    s2500Page.preencherTipoInscricao(tipInscricao)
+})
+
+Then('selecionar a opção {string} no campo Indicativo de repercussão', (indicaReperc) => {
+    s2500Page.selecionarIndiRepercussao(indicaReperc)
 })

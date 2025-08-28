@@ -5,15 +5,18 @@ const path = require("path");
 module.exports = defineConfig({
   e2e: {
     defaultCommandTimeout: 15000,
+    experimentalStudio: true,
     specPattern: "**/*.feature",
     setupNodeEvents(on) {
       on('file:preprocessor', cucumber());
       on("before:browser:launch", (browser = {}, launchOptions) => {
         if (browser.name === 'chrome') {
-          // Adiciona a extensão Dark Reader
           const extensionPath = path.resolve("C:\\Users\\luiz.gleite\\AppData\\Local\\Google\\Chrome\\User Data\\CypressUser\\Default\\Extensions\\eimadpbcbfnmbkopoojfekhnkhdbieeh\\4.9.92_0");
-          launchOptions.extensions.push(extensionPath);
+
+          launchOptions.args.push(`--load-extension=${extensionPath}`);
+          launchOptions.args.push(`--disable-extensions-except=${extensionPath}`);
         }
+
         return launchOptions;
       });
     },
@@ -21,12 +24,12 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     browser: 'chrome',
     tags: '@login or @api and not @ignore',
-    baseUrl: 'http://engjv-ecapp01:8482',
+    baseUrl: 'http://jv-rm-homrh01:8180/',
 
     // Definição das variáveis de ambiente
     env: {
       username: 'super',
-      password: 'super@123'
+      password: 'super'
     },
     // Configuração do Mochawesome
     reporter: 'mochawesome',
