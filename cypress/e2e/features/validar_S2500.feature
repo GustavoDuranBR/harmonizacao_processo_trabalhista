@@ -32,5 +32,6 @@ Feature: Realizar o Login e validar campos do evento S-2500
     Then preencher a data "2023-01" no campo Competência inicial
     Then preencher a data "2025-01" no campo Competência Final
     Then clicar na opção "Identificação do período"
+    Then clicar na opção "Incluir Período"
 
     

@@ -141,3 +141,7 @@ Then('preencher a data {string} no campo Competência Final', (dataCompetencia) 
 Then('clicar na opção {string}', () => {
   s2500Page.clicarIdentificacaoPeriodo()
 })
+
+Then('clicar na {string', ()=> {
+    s2500Page.clicarIncluirPeriodo()
+})

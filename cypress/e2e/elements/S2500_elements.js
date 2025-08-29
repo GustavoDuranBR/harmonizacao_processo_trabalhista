@@ -170,6 +170,10 @@ class S2500Elements {
         return 'button.po-button span.po-button-label'
     }
 
+    btnIncluirPeriodo() {
+        return 'po-button[p-label=" Incluir Período"] > button'
+    }
+
     // Mensagens de validação
     msgCamposObrigatórios() {
         return "app-process-identification form .ng-pristine.ng-invalid.ng-touched > [class='po-md-12 po-p-0']:nth-child(10) [class='custom-blue-container po-md-12 po-p-0'] .po-container.po-container-no-border"
@@ -244,7 +248,7 @@ class S2500Elements {
     }
 
     identificacaoPeriodo() {
-        return '.po-accordion-item-header-title'
+        return 'button[aria-label="Identificação do período"]'
     }
 
 } export default S2500Elements

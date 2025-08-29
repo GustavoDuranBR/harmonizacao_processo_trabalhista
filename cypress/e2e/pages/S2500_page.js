@@ -276,7 +276,7 @@ class S2500Page {
             .should('exist')
             .should('be.visible')
             .click({ force: true });
-        
+
         // Seleciona a opção com base no texto
         cy.getIframe().find('po-listbox')
             .contains(opcao)
@@ -307,11 +307,17 @@ class S2500Page {
     clicarIdentificacaoPeriodo() {
         cy.getIframe()
             .find(s2500Elements.identificacaoPeriodo())
-            .contains('Identificação do período')
-            .scrollIntoView()
             .should('be.visible')
-            .click({ force: true });
-        }
+            .click();
+    }
+
+    // Clicar no botão Incluir Período
+    clicarIncluirPeriodo() {
+        cy.getIframe()
+            .find(s2500Elements.btnIncluirPeriodo())
+            .should('be.visible')
+            .click();
+    }
 }
 
 export default S2500Page
